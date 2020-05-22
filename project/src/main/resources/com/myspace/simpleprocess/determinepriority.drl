@@ -1,0 +1,23 @@
+package com.myspace.simpleprocess;
+
+import com.myspace.simpleprocess.application;
+
+dialect "java"
+
+rule "set_highpriority"
+    ruleflow-group "priorityrules"
+when 
+    app : application()
+    application(amount > 49999.0)
+then 
+    app.setPriority(1);
+end
+
+rule "set_regularpriority"
+    ruleflow-group "priorityrules"
+when
+    app : application()
+    application(amount <= 49999.0)
+then 
+    app.setPriority(2);
+end

@@ -8,14 +8,20 @@ public class application implements java.io.Serializable {
 
 	static final long serialVersionUID = 1L;
 
-	@org.kie.api.definition.type.Label(value = "First Name")
+	@org.kie.api.definition.type.Label("First Name")
 	private java.lang.String first_name;
-	@org.kie.api.definition.type.Label(value = "Last Name")
+	@org.kie.api.definition.type.Label("Last Name")
 	private java.lang.String last_name;
-	@org.kie.api.definition.type.Label(value = "Amount")
+	@org.kie.api.definition.type.Label("Amount")
 	private double amount;
-	@org.kie.api.definition.type.Label(value = "Duration")
+	@org.kie.api.definition.type.Label("Duration")
 	private int duration;
+
+	@org.kie.api.definition.type.Label("Email")
+	private java.lang.String email;
+
+	@org.kie.api.definition.type.Label(value = "Priority")
+	private int priority;
 
 	public application() {
 	}
@@ -52,12 +58,30 @@ public class application implements java.io.Serializable {
 		this.duration = duration;
 	}
 
+	public java.lang.String getEmail() {
+		return this.email;
+	}
+
+	public void setEmail(java.lang.String email) {
+		this.email = email;
+	}
+
+	public int getPriority() {
+		return this.priority;
+	}
+
+	public void setPriority(int priority) {
+		this.priority = priority;
+	}
+
 	public application(java.lang.String first_name, java.lang.String last_name,
-			double amount, int duration) {
+			double amount, int duration, java.lang.String email, int priority) {
 		this.first_name = first_name;
 		this.last_name = last_name;
 		this.amount = amount;
 		this.duration = duration;
+		this.email = email;
+		this.priority = priority;
 	}
 
 }

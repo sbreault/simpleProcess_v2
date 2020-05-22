@@ -21,7 +21,7 @@
 
             ],
             "mavenDependencies" : [
-                                 "org.jbpm:jbpm-workitems-email:7.26.0.Final-redhat-00005"
+                                 "org.jbpm:jbpm-workitems-email:7.30.0.Final-redhat-00003"
 
             ],
             "icon" : "Email.png"
